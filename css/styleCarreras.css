@@ -1,0 +1,16 @@
+html, body{
+    width: 100%;
+    height: 100%;
+    background-color: #EBEFF9;
+}
+#bkg{
+    background-color: #274292;
+    color: aliceblue !important;
+}
+#bkg ul a, h1, .icono-carrera{
+    color: aliceblue !important;
+}
+/*---*/
+#fter{
+    background-color: #D8D8D8;
+}

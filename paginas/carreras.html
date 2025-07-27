@@ -1,0 +1,931 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CarrerasUDB-Soyapango</title>
+      <!--Icon de la página-->
+    <link rel="icon" href="img/icon.png" type="image/png" />
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!--Iconos Bootstrap (alternativa a font awesome)-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/styleCarreras.css">
+</head>
+<body>
+    <!--Navbar de carreras (Interactua con las tarjetas de carreras) y responsive -->
+    <nav id = "bkg" class="navbar navbar-expand-lg shadow-sm">
+        <div  class="container" >
+            <a class="navbar-brand d-flex align-items-center" href="#">
+                <i class="bi bi-mortarboard-fill icono-carrera" style ="font-size: 30px;"></i>
+                <h1>Carreras UDB</h1>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCarreras" aria-controls="navbarCarreras" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <!--Collapse me ayuda a identificar los items que se van a contraer-->
+            <div class="collapse navbar-collapse" id="navbarCarreras">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0 " >
+                    <li class="nav-item">
+                        <a class="nav-link" href="#ingenierias"><i class="bi bi-cpu"></i> Ingenierías</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#licenciaturas"><i class="bi bi-journal-text"></i> Licenciaturas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#tecnicos"><i class="bi bi-tools"></i> Técnicos</a>
+
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#profesorados"><i class="bi bi-person-badge"></i> Profesorados</a>
+                    </li>
+                    <h5 class = "p-2">
+                      <i class="bi bi-building"></i> Soyapango
+                    </h5>     
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!--Fin Navbar -->
+
+ 
+    <div class="container mt-5">
+        <div class="row">
+            <!-- Cards de Carreras -->
+            <main class="col-lg-9">
+                <h1 class="display-6 fw-bold mb-4 text-primary">Explora las Carreras</h1>
+                <!-- Tabs de categorías -->
+                <ul class="nav nav-tabs mb-4" id="carrerasTab" role="tablist" style="background: #f8fafc; border-radius: 8px; border: 1px solid #dbeafe;">
+                  <li class="nav-item" role="presentation">
+                  <button class="nav-link active fw-bold text-primary" id="todas-tab" data-bs-toggle="tab" data-bs-target="#todas" type="button" role="tab" aria-controls="todas" aria-selected="true" style="background: #fff; border: 1px solid #3b82f6; border-bottom: none; font-size: 1.25rem; color: #0a2cff !important; text-shadow: 0 1px 2px #dbeafe;">Todas</button>
+                  </li>
+                  <li class="nav-item" role="presentation">
+                   <button class="nav-link fw-bold" id="ingenierias-tab" data-bs-toggle="tab" data-bs-target="#ingenierias" type="button" role="tab" aria-controls="ingenierias" aria-selected="false">Ingenierías</button>
+                  </li>
+                  <li class="nav-item" role="presentation">
+                    <button class="nav-link fw-bold" id="licenciaturas-tab" data-bs-toggle="tab" data-bs-target="#licenciaturas" type="button" role="tab" aria-controls="licenciaturas" aria-selected="false">Licenciaturas</button>
+                  </li>
+                  <li class="nav-item" role="presentation">
+                    <button class="nav-link fw-bold" id="tecnicos-tab" data-bs-toggle="tab" data-bs-target="#tecnicos" type="button" role="tab" aria-controls="tecnicos" aria-selected="false">Técnicos</button>
+                  </li>
+                  <li class="nav-item" role="presentation">
+                  <button class="nav-link fw-bold" id="profesorados-tab" data-bs-toggle="tab" data-bs-target="#profesorados" type="button" role="tab" aria-controls="profesorados" aria-selected="false">Profesorados</button>
+                  </li>
+                </ul>
+                <div class="tab-content" id="carrerasTabContent">
+                  <!-- Todas las carreras -->
+                  <div class="tab-pane fade show active" id="todas" role="tabpanel" aria-labelledby="todas-tab">
+                    <div class="row g-4">
+                      <!-- Ingenierías -->
+                      <div class="col-md-6 col-xl-4">
+                        <div class="card h-100 border-0 shadow-sm">
+                          <div class="card-body">
+                            <h5 class="card-title"><i class="bi bi-cpu text-info"></i> Ingeniería Mecánica</h5>
+                            <p class="card-text">Diseño, análisis y mantenimiento de sistemas mecánicos industriales y automotrices.</p>
+                            <a href="https://es.wikipedia.org/wiki/Ingenier%C3%ADa_mec%C3%A1nica" target="_blank" class="btn btn-info btn-sm">Ir al sitio</a>
+                            <a href="http://www.udb.edu.sv/udb_files/content_resource/es/pensum/rebranding2024/pensum-ingenieria-mecanica-plan-2022.pdf" target="_blank" class="btn btn-outline-info btn-sm ms-2">Descargar pensum</a>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-6 col-xl-4">
+                        <div class="card h-100 border-0 shadow-sm">
+                          <div class="card-body">
+                            <h5 class="card-title"><i class="bi bi-cpu text-info"></i> Ingeniería Industrial</h5>
+                            <p class="card-text">Optimización de procesos productivos y gestión de recursos en empresas modernas.</p>
+                            <a href="https://es.wikipedia.org/wiki/Ingenier%C3%ADa_industrial" target="_blank" class="btn btn-info btn-sm">Ir al sitio</a>
+                            <a href="https://www.udb.edu.sv/udb_files/content_resource/es/pensum/rebranding2024/pensum-ingenieria-industrial-plan-2024.pdf" target="_blank" class="btn btn-outline-info btn-sm ms-2">Descargar pensum</a>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-6 col-xl-4">
+                        <div class="card h-100 border-0 shadow-sm">
+                          <div class="card-body">
+                            <h5 class="card-title"><i class="bi bi-cpu text-info"></i> Ingeniería Biomédica</h5>
+                            <p class="card-text">Aplicación de principios de ingeniería en el área de la salud y dispositivos médicos.</p>
+                            <a href="https://es.wikipedia.org/wiki/Ingenier%C3%ADa_biom%C3%A9dica" target="_blank" class="btn btn-info btn-sm">Ir al sitio</a>
+                            <a href="https://www.udb.edu.sv/udb_files/content_resource/es/pensum/rebranding2024/pensum-ingenieria-biomedica-plan-2024.pdf" target="_blank" class="btn btn-outline-info btn-sm ms-2">Descargar pensum</a>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-6 col-xl-4">
+                        <div class="card h-100 border-0 shadow-sm">
+                          <div class="card-body">
+                            <h5 class="card-title"><i class="bi bi-cpu text-info"></i> Ingeniería en Ciencias de la Computación</h5>
+                            <p class="card-text">Desarrollo de software, algoritmos y sistemas computacionales avanzados.</p>
+                            <a href="https://es.wikipedia.org/wiki/Ciencias_de_la_computaci%C3%B3n" target="_blank" class="btn btn-info btn-sm">Ir al sitio</a>
+                            <a href="http://www.udb.edu.sv/udb_files/content_resource/es/pensum/rebranding2024/pensum-ingenieria-en-ciencias-de-la-computacion-plan-2024.pdf" target="_blank" class="btn btn-outline-info btn-sm ms-2">Descargar pensum</a>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-6 col-xl-4">
+                        <div class="card h-100 border-0 shadow-sm">
+                          <div class="card-body">
+                            <h5 class="card-title"><i class="bi bi-cpu text-info"></i> Ingeniería Eléctrica</h5>
+                            <p class="card-text">Estudio y aplicación de la electricidad, electrónica y electromagnetismo.</p>
+                            <a href="https://es.wikipedia.org/wiki/Ingenier%C3%ADa_el%C3%A9ctrica" target="_blank" class="btn btn-info btn-sm">Ir al sitio</a>
+                            <a href="https://www.udb.edu.sv/udb_files/content_resource/es/pensum/rebranding2024/pensum-ingenieria-electrica-plan-2022.pdf" target="_blank" class="btn btn-outline-info btn-sm ms-2">Descargar pensum</a>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-6 col-xl-4">
+                        <div class="card h-100 border-0 shadow-sm">
+                          <div class="card-body">
+                            <h5 class="card-title"><i class="bi bi-cpu text-info"></i> Ingeniería Mecatrónica</h5>
+                            <p class="card-text">Integración de mecánica, electrónica y sistemas de control.</p>
+                            <a href="https://es.wikipedia.org/wiki/Mecatr%C3%B3nica" target="_blank" class="btn btn-info btn-sm">Ir al sitio</a>
+                            <a href="http://www.udb.edu.sv/udb_files/content_resource/es/pensum/rebranding2024/pensum-ingenieria-mecatronica-plan-2024.pdf" target="_blank" class="btn btn-outline-info btn-sm ms-2">Descargar pensum</a>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-6 col-xl-4">
+                        <div class="card h-100 border-0 shadow-sm">
+                          <div class="card-body">
+                            <h5 class="card-title"><i class="bi bi-cpu text-info"></i> Ingeniería en Aeronáutica</h5>
+                            <p class="card-text">Diseño y desarrollo de aeronaves y sistemas aeroespaciales.</p>
+                            <a href="https://es.wikipedia.org/wiki/Ingenier%C3%ADa_aeron%C3%A1utica" target="_blank" class="btn btn-info btn-sm">Ir al sitio</a>
+                            <a href="https://www.udb.edu.sv/udb_files/content_resource/es/pensum/rebranding2024/pensum-ingenieria-en-aeronautica-plan-2024.pdf" target="_blank" class="btn btn-outline-info btn-sm ms-2">Descargar pensum</a>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-6 col-xl-4">
+                        <div class="card h-100 border-0 shadow-sm">
+                          <div class="card-body">
+                            <h5 class="card-title"><i class="bi bi-cpu text-info"></i> Ingeniería Electrónica y Automatización</h5>
+                            <p class="card-text">Diseño de sistemas electrónicos y automatización industrial.</p>
+                            <a href="https://es.wikipedia.org/wiki/Ingenier%C3%ADa_electr%C3%B3nica" target="_blank" class="btn btn-info btn-sm">Ir al sitio</a>
+                            <a href="https://www.udb.edu.sv/udb_files/content_resource/es/pensum/rebranding2024/pensum-ingenieria-electronica-y-automatizacion-plan-2022.pdf" target="_blank" class="btn btn-outline-info btn-sm ms-2">Descargar pensum</a>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-6 col-xl-4">
+                        <div class="card h-100 border-0 shadow-sm">
+                          <div class="card-body">
+                            <h5 class="card-title"><i class="bi bi-cpu text-info"></i> Ingeniería en Telecomunicaciones y Redes</h5>
+                            <p class="card-text">Diseño y gestión de sistemas de comunicación y redes informáticas.</p>
+                            <a href="https://es.wikipedia.org/wiki/Telecomunicaciones" target="_blank" class="btn btn-info btn-sm">Ir al sitio</a>
+                            <a href="http://www.udb.edu.sv/udb_files/content_resource/es/pensum/rebranding2024/pensum-ingenieria-en-telecomunicaciones-y-redes-plan-2022.pdf" target="_blank" class="btn btn-outline-info btn-sm ms-2">Descargar pensum</a>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- Licenciaturas -->
+                      <div class="col-md-6 col-xl-4">
+                        <div class="card h-100 border-0 shadow-sm">
+                          <div class="card-body">
+                            <h5 class="card-title"><i class="bi bi-journal-text text-success"></i> Licenciatura en Teología Pastoral</h5>
+                            <p class="card-text">Formación integral en teología y pastoral para el servicio comunitario y religioso.</p>
+                            <a href="https://www.udb.edu.sv/oferta-academica" target="_blank" class="btn btn-success btn-sm">Ir al sitio</a>
+                            <a href="https://www.udb.edu.sv/udb_files/content_resource/es/pensum/rebranding2024/pensum-licenciatura-en-teologia-pastoral-plan-2024.pdf" target="_blank" class="btn btn-outline-success btn-sm ms-2">Descargar pensum</a>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-6 col-xl-4">
+                        <div class="card h-100 border-0 shadow-sm">
+                          <div class="card-body">
+                            <h5 class="card-title"><i class="bi bi-journal-text text-success"></i> Licenciatura en Idiomas con Especialidad en la Adquisición de Lenguas Extranjeras</h5>
+                            <p class="card-text">Especialización en la enseñanza y aprendizaje de lenguas extranjeras.</p>
+                            <a href="https://es.wikipedia.org/wiki/Idioma" target="_blank" class="btn btn-success btn-sm">Ir al sitio</a>
+                            <a href="https://www.udb.edu.sv/udb_files/content_resource/es/pensum/rebranding2024/pensum-licenciatura-en-idiomas-con-especialidad-en-lenguas-extranjeras-plan-2024.pdf" target="_blank" class="btn btn-outline-success btn-sm ms-2">Descargar pensum</a>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-6 col-xl-4">
+                        <div class="card h-100 border-0 shadow-sm">
+                          <div class="card-body">
+                            <h5 class="card-title"><i class="bi bi-journal-text text-success"></i> Licenciatura en Idiomas con Especialidad en Turismo</h5>
+                            <p class="card-text">Formación en idiomas y gestión turística internacional.</p>
+                            <a href="https://es.wikipedia.org/wiki/Turismo" target="_blank" class="btn btn-success btn-sm">Ir al sitio</a>
+                            <a href="https://www.udb.edu.sv/udb_files/content_resource/es/pensum/rebranding2024/pensum-licenciatura-en-idiomas-con-especialidad-en-turismo-plan-2024.pdf" target="_blank" class="btn btn-outline-success btn-sm ms-2">Descargar pensum</a>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-6 col-xl-4">
+                        <div class="card h-100 border-0 shadow-sm">
+                          <div class="card-body">
+                            <h5 class="card-title"><i class="bi bi-journal-text text-success"></i> Licenciatura en Ciencias de la Comunicación</h5>
+                            <p class="card-text">Estudio de los procesos comunicativos y medios de información.</p>
+                            <a href="https://es.wikipedia.org/wiki/Ciencias_de_la_comunicaci%C3%B3n" target="_blank" class="btn btn-success btn-sm">Ir al sitio</a>
+                            <a href="https://www.udb.edu.sv/udb_files/content_resource/es/pensum/rebranding2024/pensum-licenciatura-en-ciencias-de-la-comunicacion-plan-2024.pdf" target="_blank" class="btn btn-outline-success btn-sm ms-2">Descargar pensum</a>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-6 col-xl-4">
+                        <div class="card h-100 border-0 shadow-sm">
+                          <div class="card-body">
+                            <h5 class="card-title"><i class="bi bi-journal-text text-success"></i> Licenciatura en Diseño Gráfico</h5>
+                            <p class="card-text">Formación en creatividad, diseño digital y comunicación visual.</p>
+                            <a href="https://es.wikipedia.org/wiki/Dise%C3%B1o_gr%C3%A1fico" target="_blank" class="btn btn-success btn-sm">Ir al sitio</a>
+                            <a href="https://www.udb.edu.sv/udb_files/content_resource/es/pensum/rebranding2024/pensum-licenciatura-en-diseno-grafico-plan-2024.pdf" target="_blank" class="btn btn-outline-success btn-sm ms-2">Descargar pensum</a>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-6 col-xl-4">
+                        <div class="card h-100 border-0 shadow-sm">
+                          <div class="card-body">
+                            <h5 class="card-title"><i class="bi bi-journal-text text-success"></i> Licenciatura en Diseño Industrial</h5>
+                            <p class="card-text">Diseño de productos y procesos industriales innovadores.</p>
+                            <a href="https://es.wikipedia.org/wiki/Dise%C3%B1o_industrial" target="_blank" class="btn btn-success btn-sm">Ir al sitio</a>
+                            <a href="https://www.udb.edu.sv/udb_files/content_resource/es/pensum/rebranding2024/pensum-licenciatura-en-diseno-industrial-plan-2024.pdf" target="_blank" class="btn btn-outline-success btn-sm ms-2">Descargar pensum</a>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-6 col-xl-4">
+                        <div class="card h-100 border-0 shadow-sm">
+                          <div class="card-body">
+                            <h5 class="card-title"><i class="bi bi-journal-text text-success"></i> Licenciatura en Marketing</h5>
+                            <p class="card-text">Gestión de mercados, publicidad y estrategias comerciales.</p>
+                            <a href="https://es.wikipedia.org/wiki/Marketing" target="_blank" class="btn btn-success btn-sm">Ir al sitio</a>
+                            <a href="http://www.udb.edu.sv/udb_files/content_resource/es/pensum/rebranding2024/pensum-licenciatura-en-marketing-plan-2024.pdf" target="_blank" class="btn btn-outline-success btn-sm ms-2">Descargar pensum</a>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-6 col-xl-4">
+                        <div class="card h-100 border-0 shadow-sm">
+                          <div class="card-body">
+                            <h5 class="card-title"><i class="bi bi-journal-text text-success"></i> Licenciatura en Contaduría Pública</h5>
+                            <p class="card-text">Formación en contabilidad, auditoría y gestión financiera.</p>
+                            <a href="https://es.wikipedia.org/wiki/Contadur%C3%ADa" target="_blank" class="btn btn-success btn-sm">Ir al sitio</a>
+                            <a href="https://www.udb.edu.sv/udb_files/content_resource/es/pensum/rebranding2024/pensum-licenciatura-en-contaduria-publica-plan-2024.pdf" target="_blank" class="btn btn-outline-success btn-sm ms-2">Descargar pensum</a>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-6 col-xl-4">
+                        <div class="card h-100 border-0 shadow-sm">
+                          <div class="card-body">
+                            <h5 class="card-title"><i class="bi bi-journal-text text-success"></i> Licenciatura en Administración de Empresas</h5>
+                            <p class="card-text">Gestión y dirección de organizaciones empresariales.</p>
+                            <a href="https://es.wikipedia.org/wiki/Administraci%C3%B3n_de_empresas" target="_blank" class="btn btn-success btn-sm">Ir al sitio</a>
+                            <a href="https://www.udb.edu.sv/udb_files/content_resource/es/pensum/rebranding2024/pensum-licenciatura-en-administracion-de-empresas-plan-2024.pdf" target="_blank" class="btn btn-outline-success btn-sm ms-2">Descargar pensum</a>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- Técnicos -->
+                      <div class="col-md-6 col-xl-4">
+                        <div class="card h-100 border-0 shadow-sm">
+                          <div class="card-body">
+                            <h5 class="card-title"><i class="bi bi-tools text-warning"></i> Técnico en Ingeniería Mecánica</h5>
+                            <p class="card-text">Soporte técnico in mantenimiento y operación de sistemas mecánicos.</p>
+                            <a href="https://www.udb.edu.sv/oferta-academica" target="_blank" class="btn btn-warning btn-sm">Ir al sitio</a>
+                            <a href="https://www.udb.edu.sv/udb_files/content_resource/es/pensum/rebranding2024/pensum-tecnico-en-ingenieria-mecanica-plan-2024.pdf" target="_blank" class="btn btn-outline-warning btn-sm ms-2">Descargar pensum</a>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-6 col-xl-4">
+                        <div class="card h-100 border-0 shadow-sm">
+                          <div class="card-body">
+                            <h5 class="card-title"><i class="bi bi-tools text-warning"></i> Técnico en Ingeniería Eléctrica</h5>
+                            <p class="card-text">Soporte en instalaciones y mantenimiento de sistemas eléctricos.</p>
+                            <a href="https://es.wikipedia.org/wiki/Ingenier%C3%ADa_el%C3%A9ctrica" target="_blank" class="btn btn-warning btn-sm">Ir al sitio</a>
+                            <a href="https://www.udb.edu.sv/udb_files/content_resource/es/pensum/rebranding2024/pensum-tecnico-en-ingenieria-electrica-plan-2024.pdf" target="_blank" class="btn btn-outline-warning btn-sm ms-2">Descargar pensum</a>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-6 col-xl-4">
+                        <div class="card h-100 border-0 shadow-sm">
+                          <div class="card-body">
+                            <h5 class="card-title"><i class="bi bi-tools text-warning"></i> Técnico en Ingeniería Electrónica</h5>
+                            <p class="card-text">Mantenimiento y reparación de sistemas electrónicos.</p>
+                            <a href="https://es.wikipedia.org/wiki/Ingenier%C3%ADa_electr%C3%B3nica" target="_blank" class="btn btn-warning btn-sm">Ir al sitio</a>
+                            <a href="https://www.udb.edu.sv/udb_files/content_resource/es/pensum/rebranding2024/pensum-tecnico-en-ingenieria-electronica-plan-2024.pdf" target="_blank" class="btn btn-outline-warning btn-sm ms-2">Descargar pensum</a>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-6 col-xl-4">
+                        <div class="card h-100 border-0 shadow-sm">
+                          <div class="card-body">
+                            <h5 class="card-title"><i class="bi bi-tools text-warning"></i> Técnico en Ingeniería Biomédica</h5>
+                            <p class="card-text">Soporte en equipos médicos y sistemas biomédicos.</p>
+                            <a href="https://es.wikipedia.org/wiki/Ingenier%C3%ADa_biom%C3%A9dica" target="_blank" class="btn btn-warning btn-sm">Ir al sitio</a>
+                            <a href="https://www.udb.edu.sv/udb_files/content_resource/es/pensum/rebranding2024/pensum-tecnico-en-ingenieria-biomedica-plan-2024.pdf" target="_blank" class="btn btn-outline-warning btn-sm ms-2">Descargar pensum</a>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-6 col-xl-4">
+                        <div class="card h-100 border-0 shadow-sm">
+                          <div class="card-body">
+                            <h5 class="card-title"><i class="bi bi-tools text-warning"></i> Técnico en Ingeniería en Computación</h5>
+                            <p class="card-text">Soporte in sistemas informáticos y redes.</p>
+                            <a href="https://es.wikipedia.org/wiki/Ciencias_de_la_computaci%C3%B3n" target="_blank" class="btn btn-warning btn-sm">Ir al sitio</a>
+                            <a href="https://www.udb.edu.sv/udb_files/content_resource/es/pensum/rebranding2024/pensum-tecnico-en-ingenieria-en-computacion-plan-2024.pdf" target="_blank" class="btn btn-outline-warning btn-sm ms-2">Descargar pensum</a>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-6 col-xl-4">
+                        <div class="card h-100 border-0 shadow-sm">
+                          <div class="card-body">
+                            <h5 class="card-title"><i class="bi bi-tools text-warning"></i> Técnico en Multimedia</h5>
+                            <p class="card-text">Desarrollo de contenidos digitales, animación y diseño interactivo.</p>
+                            <a href="https://www.udbvirtual.edu.sv/tecnico_en_multimedia" target="_blank" class="btn btn-warning btn-sm">Ir al sitio</a>
+                            <a href="https://www.udb.edu.sv/udb_files/content_resource/es/pensum/rebranding2024/pensum-tecnico-en-multimedia-plan-2024.pdf" target="_blank" class="btn btn-outline-warning btn-sm ms-2">Descargar pensum</a>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-6 col-xl-4">
+                        <div class="card h-100 border-0 shadow-sm">
+                          <div class="card-body">
+                            <h5 class="card-title"><i class="bi bi-tools text-warning"></i> Técnico en Diseño Gráfico</h5>
+                            <p class="card-text">Soporte en diseño digital y comunicación visual.</p>
+                            <a href="https://es.wikipedia.org/wiki/Dise%C3%B1o_gr%C3%A1fico" target="_blank" class="btn btn-warning btn-sm">Ir al sitio</a>
+                            <a href="http://www.udb.edu.sv/udb_files/content_resource/es/pensum/rebranding2024/pensum-tecnico-en-diseno-grafico-plan-2024.pdf" target="_blank" class="btn btn-outline-warning btn-sm ms-2">Descargar pensum</a>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-6 col-xl-4">
+                        <div class="card h-100 border-0 shadow-sm">
+                          <div class="card-body">
+                            <h5 class="card-title"><i class="bi bi-tools text-warning"></i> Técnico en Control de la Calidad</h5>
+                            <p class="card-text">Supervisión y control de procesos productivos.</p>
+                            <a href="https://es.wikipedia.org/wiki/Control_de_calidad" target="_blank" class="btn btn-warning btn-sm">Ir al sitio</a>
+                            <a href="https://www.udb.edu.sv/udb_files/content_resource/es/pensum/rebranding2024/pensum-tecnico-en-control-de-la-calidad-plan-2024.pdf" target="_blank" class="btn btn-outline-warning btn-sm ms-2">Descargar pensum</a>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-6 col-xl-4">
+                        <div class="card h-100 border-0 shadow-sm">
+                          <div class="card-body">
+                            <h5 class="card-title"><i class="bi bi-tools text-warning"></i> Técnico en Mantenimiento Aeronáutico</h5>
+                            <p class="card-text">Mantenimiento de aeronaves y sistemas aeroespaciales.</p>
+                            <a href="https://es.wikipedia.org/wiki/Mantenimiento_aeron%C3%A1utico" target="_blank" class="btn btn-warning btn-sm">Ir al sitio</a>
+                            <a href="https://www.udb.edu.sv/udb_files/content_resource/es/pensum/rebranding2024/pensum-tecnico-en-mantenimiento-aeronautico-plan-2024.pdf" target="_blank" class="btn btn-outline-warning btn-sm ms-2">Descargar pensum</a>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-6 col-xl-4">
+                        <div class="card h-100 border-0 shadow-sm">
+                          <div class="card-body">
+                            <h5 class="card-title"><i class="bi bi-tools text-warning"></i> Técnico en Ortesis y Prótesis (semi-presencial)</h5>
+                            <p class="card-text">Soporte en fabricación y ajuste de dispositivos ortopédicos.</p>
+                            <a href="https://es.wikipedia.org/wiki/Ortesis" target="_blank" class="btn btn-warning btn-sm">Ir al sitio</a>
+                            <a href="https://www.udb.edu.sv/udb_files/content_resource/es/pensum/rebranding2024/pensum-tecnico-en-ortesis-y-protesis-plan-2024.pdf" target="_blank" class="btn btn-outline-warning btn-sm ms-2">Descargar pensum</a>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-6 col-xl-4">
+                        <div class="card h-100 border-0 shadow-sm">
+                          <div class="card-body">
+                            <h5 class="card-title"><i class="bi bi-tools text-warning"></i> Técnico en Guía de Turismo Bilingüe</h5>
+                            <p class="card-text">Guía profesional en turismo nacional e internacional.</p>
+                            <a href="https://es.wikipedia.org/wiki/Gu%C3%ADa_de_turismo" target="_blank" class="btn btn-warning btn-sm">Ir al sitio</a>
+                            <a href="https://www.udb.edu.sv/udb_files/content_resource/es/pensum/rebranding2024/pensum-tecnico-en-guia-de-turismo-bilingue-plan-2024.pdf" target="_blank" class="btn btn-outline-warning btn-sm ms-2">Descargar pensum</a>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-6 col-xl-4">
+                        <div class="card h-100 border-0 shadow-sm">
+                          <div class="card-body">
+                            <h5 class="card-title"><i class="bi bi-tools text-warning"></i> Técnico en Asesoría Financiera Sostenible</h5>
+                            <p class="card-text">Asesoría en finanzas responsables y sostenibles.</p>
+                            <a href="https://es.wikipedia.org/wiki/Finanzas_sostenibles" target="_blank" class="btn btn-warning btn-sm">Ir al sitio</a>
+                            <a href="https://www.udb.edu.sv/udb_files/content_resource/es/pensum/rebranding2024/pensum-tecnico-en-asesoria-financiera-sostenible-plan-2024.pdf" target="_blank" class="btn btn-outline-warning btn-sm ms-2">Descargar pensum</a>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-6 col-xl-4">
+                        <div class="card h-100 border-0 shadow-sm">
+                          <div class="card-body">
+                            <h5 class="card-title"><i class="bi bi-tools text-warning"></i> Técnico en Gestión del Talento Humano</h5>
+                            <p class="card-text">Gestión de recursos humanos y desarrollo organizacional.</p>
+                            <a href="https://es.wikipedia.org/wiki/Recursos_humanos" target="_blank" class="btn btn-warning btn-sm">Ir al sitio</a>
+                            <a href="https://www.udb.edu.sv/udb_files/content_resource/es/pensum/rebranding2024/pensum-tecnico-en-gestion-del-talento-humano-plan-2024.pdf" target="_blank" class="btn btn-outline-warning btn-sm ms-2">Descargar pensum</a>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- Profesorados -->
+                      <div class="col-md-6 col-xl-4">
+                        <div class="card h-100 border-0 shadow-sm">
+                          <div class="card-body">
+                            <h5 class="card-title"><i class="bi bi-person-badge text-primary"></i> Profesorado en Teología Pastoral</h5>
+                            <p class="card-text">Preparación docente para el acompañamiento espiritual y educativo.</p>
+                            <a href="https://www.udb.edu.sv/oferta-academica" target="_blank" class="btn btn-primary btn-sm">Ir al sitio</a>
+                            <a href="https://www.udb.edu.sv/udb_files/content_resource/es/pensum/rebranding2024/pensum-profesorado-en-teologia-pastoral-plan-2024.pdf" target="_blank" class="btn btn-outline-primary btn-sm ms-2">Descargar pensum</a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Ingenierías solo -->
+                  <div class="tab-pane fade" id="ingenierias" role="tabpanel" aria-labelledby="ingenierias-tab">
+                    <div class="row g-4">
+                      <div class="col-md-6 col-xl-4">
+                        <div class="card h-100 border-0 shadow-sm">
+                          <div class="card-body">
+                            <h5 class="card-title"><i class="bi bi-cpu text-info"></i> Ingeniería Mecánica</h5>
+                            <p class="card-text">Diseño, análisis y mantenimiento de sistemas mecánicos industriales y automotrices.</p>
+                            <a href="https://es.wikipedia.org/wiki/Ingenier%C3%ADa_mec%C3%A1nica" target="_blank" class="btn btn-info btn-sm">Ir al sitio</a>
+                            <a href="http://www.udb.edu.sv/udb_files/content_resource/es/pensum/rebranding2024/pensum-ingenieria-mecanica-plan-2022.pdf" target="_blank" class="btn btn-outline-info btn-sm ms-2">Descargar pensum</a>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-6 col-xl-4">
+                        <div class="card h-100 border-0 shadow-sm">
+                          <div class="card-body">
+                            <h5 class="card-title"><i class="bi bi-cpu text-info"></i> Ingeniería Industrial</h5>
+                            <p class="card-text">Optimización de procesos productivos y gestión de recursos en empresas modernas.</p>
+                            <a href="https://es.wikipedia.org/wiki/Ingenier%C3%ADa_industrial" target="_blank" class="btn btn-info btn-sm">Ir al sitio</a>
+                            <a href="https://www.udb.edu.sv/udb_files/content_resource/es/pensum/rebranding2024/pensum-ingenieria-industrial-plan-2024.pdf" target="_blank" class="btn btn-outline-info btn-sm ms-2">Descargar pensum</a>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-6 col-xl-4">
+                        <div class="card h-100 border-0 shadow-sm">
+                          <div class="card-body">
+                            <h5 class="card-title"><i class="bi bi-cpu text-info"></i> Ingeniería Biomédica</h5>
+                            <p class="card-text">Aplicación de principios de ingeniería en el área de la salud y dispositivos médicos.</p>
+                            <a href="https://es.wikipedia.org/wiki/Ingenier%C3%ADa_biom%C3%A9dica" target="_blank" class="btn btn-info btn-sm">Ir al sitio</a>
+                            <a href="https://www.udb.edu.sv/udb_files/content_resource/es/pensum/rebranding2024/pensum-ingenieria-biomedica-plan-2024.pdf" target="_blank" class="btn btn-outline-info btn-sm ms-2">Descargar pensum</a>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-6 col-xl-4">
+                        <div class="card h-100 border-0 shadow-sm">
+                          <div class="card-body">
+                            <h5 class="card-title"><i class="bi bi-cpu text-info"></i> Ingeniería en Ciencias de la Computación</h5>
+                            <p class="card-text">Desarrollo de software, algoritmos y sistemas computacionales avanzados.</p>
+                            <a href="https://es.wikipedia.org/wiki/Ciencias_de_la_computaci%C3%B3n" target="_blank" class="btn btn-info btn-sm">Ir al sitio</a>
+                            <a href="https://www.udb.edu.sv/udb_files/content_resource/es/pensum/rebranding2024/pensum-ingenieria-en-ciencias-de-la-computacion-plan-2024.pdf" target="_blank" class="btn btn-outline-info btn-sm ms-2">Descargar pensum</a>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-6 col-xl-4">
+                        <div class="card h-100 border-0 shadow-sm">
+                          <div class="card-body">
+                            <h5 class="card-title"><i class="bi bi-cpu text-info"></i> Ingeniería Eléctrica</h5>
+                            <p class="card-text">Estudio y aplicación de la electricidad, electrónica y electromagnetismo.</p>
+                            <a href="https://es.wikipedia.org/wiki/Ingenier%C3%ADa_el%C3%A9ctrica" target="_blank" class="btn btn-info btn-sm">Ir al sitio</a>
+                            <a href="https://www.udb.edu.sv/udb_files/content_resource/es/pensum/rebranding2024/pensum-ingenieria-electrica-plan-2022.pdf" target="_blank" class="btn btn-outline-info btn-sm ms-2">Descargar pensum</a>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-6 col-xl-4">
+                        <div class="card h-100 border-0 shadow-sm">
+                          <div class="card-body">
+                            <h5 class="card-title"><i class="bi bi-cpu text-info"></i> Ingeniería Mecatrónica</h5>
+                            <p class="card-text">Integración de mecánica, electrónica y sistemas de control.</p>
+                            <a href="https://es.wikipedia.org/wiki/Ingenier%C3%ADa_mecatr%C3%B3nica" target="_blank" class="btn btn-info btn-sm">Ir al sitio</a>
+                            <a href="https://www.udb.edu.sv/udb_files/content_resource/es/pensum/rebranding2024/pensum-ingenieria-mecatronica-plan-2024.pdf" target="_blank" class="btn btn-outline-info btn-sm ms-2">Descargar pensum</a>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-6 col-xl-4">
+                        <div class="card h-100 border-0 shadow-sm">
+                          <div class="card-body">
+                            <h5 class="card-title"><i class="bi bi-cpu text-info"></i> Ingeniería en Aeronáutica</h5>
+                            <p class="card-text">Diseño y desarrollo de aeronaves y sistemas aeroespaciales.</p>
+                            <a href="https://es.wikipedia.org/wiki/Ingenier%C3%ADa_aeron%C3%A1utica" target="_blank" class="btn btn-info btn-sm">Ir al sitio</a>
+                            <a href="https://www.udb.edu.sv/udb_files/content_resource/es/pensum/rebranding2024/pensum-ingenieria-en-aeronautica-plan-2024.pdf" target="_blank" class="btn btn-outline-info btn-sm ms-2">Descargar pensum</a>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-6 col-xl-4">
+                        <div class="card h-100 border-0 shadow-sm">
+                          <div class="card-body">
+                            <h5 class="card-title"><i class="bi bi-cpu text-info"></i> Ingeniería Electrónica y Automatización</h5>
+                            <p class="card-text">Diseño de sistemas electrónicos y automatización industrial.</p>
+                            <a href="https://es.wikipedia.org/wiki/Ingenier%C3%ADa_electr%C3%B3nica" target="_blank" class="btn btn-info btn-sm">Ir al sitio</a>
+                            <a href="https://www.udb.edu.sv/udb_files/content_resource/es/pensum/rebranding2024/pensum-ingenieria-electronica-y-automatizacion-plan-2022.pdf" target="_blank" class="btn btn-outline-info btn-sm ms-2">Descargar pensum</a>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-6 col-xl-4">
+                        <div class="card h-100 border-0 shadow-sm">
+                          <div class="card-body">
+                            <h5 class="card-title"><i class="bi bi-cpu text-info"></i> Ingeniería en Telecomunicaciones y Redes</h5>
+                            <p class="card-text">Diseño y gestión de sistemas de comunicación y redes informáticas.</p>
+                            <a href="https://es.wikipedia.org/wiki/Ingenier%C3%ADa_en_telecomunicaciones" target="_blank" class="btn btn-info btn-sm">Ir al sitio</a>
+                            <a href="https://www.udb.edu.sv/udb_files/content_resource/es/pensum/rebranding2024/pensum-ingenieria-en-telecomunicaciones-y-redes-plan-2022.pdf" target="_blank" class="btn btn-outline-info btn-sm ms-2">Descargar pensum</a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Licenciaturas solo -->
+                  <div class="tab-pane fade" id="licenciaturas" role="tabpanel" aria-labelledby="licenciaturas-tab">
+                    <div class="row g-4">
+                      <div class="col-md-6 col-xl-4">
+                        <div class="card h-100 border-0 shadow-sm">
+                          <div class="card-body">
+                            <h5 class="card-title"><i class="bi bi-journal-text text-success"></i> Licenciatura en Teología Pastoral</h5>
+                            <p class="card-text">Formación integral en teología y pastoral para el servicio comunitario y religioso.</p>
+                            <a href="https://es.wikipedia.org/wiki/Teolog%C3%ADa" target="_blank" class="btn btn-success btn-sm">Ir al sitio</a>
+                            <a href="https://www.udb.edu.sv/udb_files/content_resource/es/pensum/rebranding2024/pensum-licenciatura-en-teologia-pastoral-plan-2024.pdf" target="_blank" class="btn btn-outline-success btn-sm ms-2">Descargar pensum</a>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-6 col-xl-4">
+                        <div class="card h-100 border-0 shadow-sm">
+                          <div class="card-body">
+                            <h5 class="card-title"><i class="bi bi-journal-text text-success"></i> Licenciatura en Idiomas con Especialidad en la Adquisición de Lenguas Extranjeras</h5>
+                            <p class="card-text">Especialización en la enseñanza y aprendizaje de lenguas extranjeras.</p>
+                            <a href="https://es.wikipedia.org/wiki/Idioma" target="_blank" class="btn btn-success btn-sm">Ir al sitio</a>
+                            <a href="https://www.udb.edu.sv/udb_files/content_resource/es/pensum/rebranding2024/pensum-licenciatura-en-idiomas-con-especialidad-en-lenguas-extranjeras-plan-2024.pdf" target="_blank" class="btn btn-outline-success btn-sm ms-2">Descargar pensum</a>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-6 col-xl-4">
+                        <div class="card h-100 border-0 shadow-sm">
+                          <div class="card-body">
+                            <h5 class="card-title"><i class="bi bi-journal-text text-success"></i> Licenciatura en Idiomas con Especialidad en Turismo</h5>
+                            <p class="card-text">Formación in idiomas y gestión turística internacional.</p>
+                            <a href="https://es.wikipedia.org/wiki/Turismo" target="_blank" class="btn btn-success btn-sm">Ir al sitio</a>
+                            <a href="https://www.udb.edu.sv/udb_files/content_resource/es/pensum/rebranding2024/pensum-licenciatura-en-idiomas-con-especialidad-en-turismo-plan-2024.pdf" target="_blank" class="btn btn-outline-success btn-sm ms-2">Descargar pensum</a>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-6 col-xl-4">
+                        <div class="card h-100 border-0 shadow-sm">
+                          <div class="card-body">
+                            <h5 class="card-title"><i class="bi bi-journal-text text-success"></i> Licenciatura en Ciencias de la Comunicación</h5>
+                            <p class="card-text">Estudio de los procesos comunicativos y medios de información.</p>
+                            <a href="https://es.wikipedia.org/wiki/Ciencias_de_la_comunicaci%C3%B3n" target="_blank" class="btn btn-success btn-sm">Ir al sitio</a>
+                            <a href="https://www.udb.edu.sv/udb_files/content_resource/es/pensum/rebranding2024/pensum-licenciatura-en-ciencias-de-la-comunicacion-plan-2024.pdf" target="_blank" class="btn btn-outline-success btn-sm ms-2">Descargar pensum</a>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-6 col-xl-4">
+                        <div class="card h-100 border-0 shadow-sm">
+                          <div class="card-body">
+                            <h5 class="card-title"><i class="bi bi-journal-text text-success"></i> Licenciatura en Diseño Gráfico</h5>
+                            <p class="card-text">Formación en creatividad, diseño digital y comunicación visual.</p>
+                            <a href="https://es.wikipedia.org/wiki/Dise%C3%B1o_gr%C3%A1fico" target="_blank" class="btn btn-success btn-sm">Ir al sitio</a>
+                            <a href="https://www.udb.edu.sv/udb_files/content_resource/es/pensum/rebranding2024/pensum-licenciatura-en-diseno-grafico-plan-2024.pdf" target="_blank" class="btn btn-outline-success btn-sm ms-2">Descargar pensum</a>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-6 col-xl-4">
+                        <div class="card h-100 border-0 shadow-sm">
+                          <div class="card-body">
+                            <h5 class="card-title"><i class="bi bi-journal-text text-success"></i> Licenciatura en Diseño Industrial</h5>
+                            <p class="card-text">Diseño de productos y procesos industriales innovadores.</p>
+                            <a href="https://es.wikipedia.org/wiki/Dise%C3%B1o_industrial" target="_blank" class="btn btn-success btn-sm">Ir al sitio</a>
+                            <a href="https://www.udb.edu.sv/udb_files/content_resource/es/pensum/rebranding2024/pensum-licenciatura-en-diseno-industrial-plan-2024.pdf" target="_blank" class="btn btn-outline-success btn-sm ms-2">Descargar pensum</a>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-6 col-xl-4">
+                        <div class="card h-100 border-0 shadow-sm">
+                          <div class="card-body">
+                            <h5 class="card-title"><i class="bi bi-journal-text text-success"></i> Licenciatura en Marketing</h5>
+                            <p class="card-text">Gestión de mercados, publicidad y estrategias comerciales.</p>
+                            <a href="https://es.wikipedia.org/wiki/Marketing" target="_blank" class="btn btn-success btn-sm">Ir al sitio</a>
+                            <a href="http://www.udb.edu.sv/udb_files/content_resource/es/pensum/rebranding2024/pensum-licenciatura-en-marketing-plan-2024.pdf" target="_blank" class="btn btn-outline-success btn-sm ms-2">Descargar pensum</a>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-6 col-xl-4">
+                        <div class="card h-100 border-0 shadow-sm">
+                          <div class="card-body">
+                            <h5 class="card-title"><i class="bi bi-journal-text text-success"></i> Licenciatura en Contaduría Pública</h5>
+                            <p class="card-text">Formación en contabilidad, auditoría y gestión financiera.</p>
+                            <a href="https://es.wikipedia.org/wiki/Contadur%C3%ADa" target="_blank" class="btn btn-success btn-sm">Ir al sitio</a>
+                            <a href="https://www.udb.edu.sv/udb_files/content_resource/es/pensum/rebranding2024/pensum-licenciatura-en-contaduria-publica-plan-2024.pdf" target="_blank" class="btn btn-outline-success btn-sm ms-2">Descargar pensum</a>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-6 col-xl-4">
+                        <div class="card h-100 border-0 shadow-sm">
+                          <div class="card-body">
+                            <h5 class="card-title"><i class="bi bi-journal-text text-success"></i> Licenciatura en Administración de Empresas</h5>
+                            <p class="card-text">Gestión y dirección de organizaciones empresariales.</p>
+                            <a href="https://es.wikipedia.org/wiki/Administraci%C3%B3n_de_empresas" target="_blank" class="btn btn-success btn-sm">Ir al sitio</a>
+                            <a href="https://www.udb.edu.sv/udb_files/content_resource/es/pensum/rebranding2024/pensum-licenciatura-en-administracion-de-empresas-plan-2024.pdf" target="_blank" class="btn btn-outline-success btn-sm ms-2">Descargar pensum</a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Técnicos solo -->
+                  <div class="tab-pane fade" id="tecnicos" role="tabpanel" aria-labelledby="tecnicos-tab">
+                    <div class="row g-4">
+                      <div class="col-md-6 col-xl-4">
+                        <div class="card h-100 border-0 shadow-sm">
+                          <div class="card-body">
+                            <h5 class="card-title"><i class="bi bi-tools text-warning"></i> Técnico en Ingeniería Mecánica</h5>
+                            <p class="card-text">Soporte técnico en mantenimiento y operación de sistemas mecánicos.</p>
+                            <a href="https://es.wikipedia.org/wiki/Ingenier%C3%ADa_mec%C3%A1nica" target="_blank" class="btn btn-warning btn-sm">Ir al sitio</a>
+                            <a href="https://www.udb.edu.sv/udb_files/content_resource/es/pensum/rebranding2024/pensum-tecnico-en-ingenieria-mecanica-plan-2024.pdf" target="_blank" class="btn btn-outline-warning btn-sm ms-2">Descargar pensum</a>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-6 col-xl-4">
+                        <div class="card h-100 border-0 shadow-sm">
+                          <div class="card-body">
+                            <h5 class="card-title"><i class="bi bi-tools text-warning"></i> Técnico en Ingeniería Eléctrica</h5>
+                            <p class="card-text">Soporte en instalaciones y mantenimiento de sistemas eléctricos.</p>
+                            <a href="https://es.wikipedia.org/wiki/Ingenier%C3%ADa_el%C3%A9ctrica" target="_blank" class="btn btn-warning btn-sm">Ir al sitio</a>
+                            <a href="https://www.udb.edu.sv/udb_files/content_resource/es/pensum/rebranding2024/pensum-tecnico-en-ingenieria-electrica-plan-2024.pdf" target="_blank" class="btn btn-outline-warning btn-sm ms-2">Descargar pensum</a>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-6 col-xl-4">
+                        <div class="card h-100 border-0 shadow-sm">
+                          <div class="card-body">
+                            <h5 class="card-title"><i class="bi bi-tools text-warning"></i> Técnico en Ingeniería Electrónica</h5>
+                            <p class="card-text">Mantenimiento y reparación de sistemas electrónicos.</p>
+                            <a href="https://es.wikipedia.org/wiki/Ingenier%C3%ADa_electr%C3%B3nica" target="_blank" class="btn btn-warning btn-sm">Ir al sitio</a>
+                            <a href="https://www.udb.edu.sv/udb_files/content_resource/es/pensum/rebranding2024/pensum-tecnico-en-ingenieria-electronica-plan-2024.pdf" target="_blank" class="btn btn-outline-warning btn-sm ms-2">Descargar pensum</a>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-6 col-xl-4">
+                        <div class="card h-100 border-0 shadow-sm">
+                          <div class="card-body">
+                            <h5 class="card-title"><i class="bi bi-tools text-warning"></i> Técnico en Ingeniería Biomédica</h5>
+                            <p class="card-text">Soporte en equipos médicos y sistemas biomédicos.</p>
+                            <a href="https://es.wikipedia.org/wiki/Ingenier%C3%ADa_biom%C3%A9dica" target="_blank" class="btn btn-warning btn-sm">Ir al sitio</a>
+                            <a href="https://www.udb.edu.sv/udb_files/content_resource/es/pensum/rebranding2024/pensum-tecnico-en-ingenieria-biomedica-plan-2024.pdf" target="_blank" class="btn btn-outline-warning btn-sm ms-2">Descargar pensum</a>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-6 col-xl-4">
+                        <div class="card h-100 border-0 shadow-sm">
+                          <div class="card-body">
+                            <h5 class="card-title"><i class="bi bi-tools text-warning"></i> Técnico en Ingeniería en Computación</h5>
+                            <p class="card-text">Soporte en sistemas informáticos y redes.</p>
+                            <a href="https://es.wikipedia.org/wiki/Ciencias_de_la_computaci%C3%B3n" target="_blank" class="btn btn-warning btn-sm">Ir al sitio</a>
+                            <a href="https://www.udb.edu.sv/udb_files/content_resource/es/pensum/rebranding2024/pensum-tecnico-en-ingenieria-en-computacion-plan-2024.pdf" target="_blank" class="btn btn-outline-warning btn-sm ms-2">Descargar pensum</a>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-6 col-xl-4">
+                        <div class="card h-100 border-0 shadow-sm">
+                          <div class="card-body">
+                            <h5 class="card-title"><i class="bi bi-tools text-warning"></i> Técnico en Multimedia</h5>
+                            <p class="card-text">Desarrollo de contenidos digitales, animación y diseño interactivo.</p>
+                            <a href="https://es.wikipedia.org/wiki/Multimedia" target="_blank" class="btn btn-warning btn-sm">Ir al sitio</a>
+                            <a href="https://www.udb.edu.sv/udb_files/content_resource/es/pensum/rebranding2024/pensum-tecnico-en-multimedia-plan-2024.pdf" target="_blank" class="btn btn-outline-warning btn-sm ms-2">Descargar pensum</a>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-6 col-xl-4">
+                        <div class="card h-100 border-0 shadow-sm">
+                          <div class="card-body">
+                            <h5 class="card-title"><i class="bi bi-tools text-warning"></i> Técnico en Diseño Gráfico</h5>
+                            <p class="card-text">Soporte en diseño digital y comunicación visual.</p>
+                            <a href="https://es.wikipedia.org/wiki/Dise%C3%B1o_gr%C3%A1fico" target="_blank" class="btn btn-warning btn-sm">Ir al sitio</a>
+                            <a href="http://www.udb.edu.sv/udb_files/content_resource/es/pensum/rebranding2024/pensum-tecnico-en-diseno-grafico-plan-2024.pdf" target="_blank" class="btn btn-outline-warning btn-sm ms-2">Descargar pensum</a>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-6 col-xl-4">
+                        <div class="card h-100 border-0 shadow-sm">
+                          <div class="card-body">
+                            <h5 class="card-title"><i class="bi bi-tools text-warning"></i> Técnico en Control de la Calidad</h5>
+                            <p class="card-text">Supervisión y control de procesos productivos.</p>
+                            <a href="https://es.wikipedia.org/wiki/Control_de_calidad" target="_blank" class="btn btn-warning btn-sm">Ir al sitio</a>
+                            <a href="https://www.udb.edu.sv/udb_files/content_resource/es/pensum/rebranding2024/pensum-tecnico-en-control-de-la-calidad-plan-2024.pdf" target="_blank" class="btn btn-outline-warning btn-sm ms-2">Descargar pensum</a>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-6 col-xl-4">
+                        <div class="card h-100 border-0 shadow-sm">
+                          <div class="card-body">
+                            <h5 class="card-title"><i class="bi bi-tools text-warning"></i> Técnico en Mantenimiento Aeronáutico</h5>
+                            <p class="card-text">Mantenimiento de aeronaves y sistemas aeroespaciales.</p>
+                            <a href="https://es.wikipedia.org/wiki/Mantenimiento_aeron%C3%A1utico" target="_blank" class="btn btn-warning btn-sm">Ir al sitio</a>
+                            <a href="https://www.udb.edu.sv/udb_files/content_resource/es/pensum/rebranding2024/pensum-tecnico-en-mantenimiento-aeronautico-plan-2024.pdf" target="_blank" class="btn btn-outline-warning btn-sm ms-2">Descargar pensum</a>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-6 col-xl-4">
+                        <div class="card h-100 border-0 shadow-sm">
+                          <div class="card-body">
+                            <h5 class="card-title"><i class="bi bi-tools text-warning"></i> Técnico en Ortesis y Prótesis (semi-presencial)</h5>
+                            <p class="card-text">Soporte en fabricación y ajuste de dispositivos ortopédicos.</p>
+                            <a href="https://es.wikipedia.org/wiki/Ortesis" target="_blank" class="btn btn-warning btn-sm">Ir al sitio</a>
+                            <a href="https://www.udb.edu.sv/udb_files/content_resource/es/pensum/rebranding2024/pensum-tecnico-en-ortesis-y-protesis-plan-2024.pdf" target="_blank" class="btn btn-outline-warning btn-sm ms-2">Descargar pensum</a>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-6 col-xl-4">
+                        <div class="card h-100 border-0 shadow-sm">
+                          <div class="card-body">
+                            <h5 class="card-title"><i class="bi bi-tools text-warning"></i> Técnico en Guía de Turismo Bilingüe</h5>
+                            <p class="card-text">Guía profesional en turismo nacional e internacional.</p>
+                            <a href="https://es.wikipedia.org/wiki/Gu%C3%ADa_de_turismo" target="_blank" class="btn btn-warning btn-sm">Ir al sitio</a>
+                            <a href="https://www.udb.edu.sv/udb_files/content_resource/es/pensum/rebranding2024/pensum-tecnico-en-guia-de-turismo-bilingue-plan-2024.pdf" target="_blank" class="btn btn-outline-warning btn-sm ms-2">Descargar pensum</a>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-6 col-xl-4">
+                        <div class="card h-100 border-0 shadow-sm">
+                          <div class="card-body">
+                            <h5 class="card-title"><i class="bi bi-tools text-warning"></i> Técnico en Asesoría Financiera Sostenible</h5>
+                            <p class="card-text">Asesoría en finanzas responsables y sostenibles.</p>
+                            <a href="https://es.wikipedia.org/wiki/Finanzas_sostenibles" target="_blank" class="btn btn-warning btn-sm">Ir al sitio</a>
+                            <a href="https://www.udb.edu.sv/udb_files/content_resource/es/pensum/rebranding2024/pensum-tecnico-en-asesoria-financiera-sostenible-plan-2024.pdf" target="_blank" class="btn btn-outline-warning btn-sm ms-2">Descargar pensum</a>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-6 col-xl-4">
+                        <div class="card h-100 border-0 shadow-sm">
+                          <div class="card-body">
+                            <h5 class="card-title"><i class="bi bi-tools text-warning"></i> Técnico en Gestión del Talento Humano</h5>
+                            <p class="card-text">Gestión de recursos humanos y desarrollo organizacional.</p>
+                            <a href="https://es.wikipedia.org/wiki/Recursos_humanos" target="_blank" class="btn btn-warning btn-sm">Ir al sitio</a>
+                            <a href="https://www.udb.edu.sv/udb_files/content_resource/es/pensum/rebranding2024/pensum-tecnico-en-gestion-del-talento-humano-plan-2024.pdf" target="_blank" class="btn btn-outline-warning btn-sm ms-2">Descargar pensum</a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Profesorados solo -->
+                  <div class="tab-pane fade" id="profesorados" role="tabpanel" aria-labelledby="profesorados-tab">
+                    <div class="row g-4">
+                      <div class="col-md-6 col-xl-4">
+                        <div class="card h-100 border-0 shadow-sm">
+                          <div class="card-body">
+                            <h5 class="card-title"><i class="bi bi-person-badge text-primary"></i> Profesorado en Teología Pastoral</h5>
+                            <p class="card-text">Preparación docente para el acompañamiento espiritual y educativo.</p>
+                            <a href="https://www.udb.edu.sv/oferta-academica" target="_blank" class="btn btn-primary btn-sm">Ir al sitio</a>
+                            <a href="https://www.udb.edu.sv/udb_files/content_resource/es/pensum/rebranding2024/pensum-profesorado-en-teologia-pastoral-plan-2024.pdf" target="_blank" class="btn btn-outline-primary btn-sm ms-2">Descargar pensum</a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+            </main>
+            <!-- Sidebar derecho original UDB -->
+            <aside class="col-lg-3 d-none d-lg-block">
+                <div class="mb-4 p-4 rounded-3 shadow-sm" style="background: #e0e7ff; border: 1px solid #c7d2fe;">
+                    <h4 class="fw-bold text-center mb-3" style="color: #29489c; letter-spacing: 1px;">Agenda</h4>
+                    <div class="text-center text-muted" style="font-size: 1.1rem; padding: 2.5rem 0;">Sin eventos programados</div>
+                </div>
+                <div class="mb-4 p-4 rounded-3 shadow-sm" style="background: #e0e7ff; border: 1px solid #c7d2fe;">
+                    <h4 class="fw-bold text-center mb-3" style="color: #29489c; letter-spacing: 1px;">Noticias</h4>
+                    <div class="text-center text-muted" style="font-size: 1.1rem; padding: 2.5rem 0;">Sin noticias disponibles</div>
+                </div>
+            </aside>
+
+                <!-- Modals de información -->
+                <!-- Ingeniería Mecánica -->
+                <div class="modal fade" id="modalMecanica" tabindex="-1" aria-labelledby="modalMecanicaLabel" aria-hidden="true">
+                  <div class="modal-dialog">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title" id="modalMecanicaLabel">Ingeniería Mecánica</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                      </div>
+                      <div class="modal-body">
+                        <p>La Ingeniería Mecánica se enfoca en el diseño, análisis y mantenimiento de sistemas mecánicos industriales y automotrices. Los egresados pueden trabajar en empresas de manufactura, automotriz, energía y consultoría técnica.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Ingeniería Industrial -->
+                <div class="modal fade" id="modalIndustrial" tabindex="-1" aria-labelledby="modalIndustrialLabel" aria-hidden="true">
+                  <div class="modal-dialog">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title" id="modalIndustrialLabel">Ingeniería Industrial</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                      </div>
+                      <div class="modal-body">
+                        <p>La Ingeniería Industrial prepara profesionales para optimizar procesos productivos, gestionar recursos y liderar proyectos en empresas modernas, con enfoque en eficiencia y calidad.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Licenciatura en Teología Pastoral -->
+                <div class="modal fade" id="modalTeologia" tabindex="-1" aria-labelledby="modalTeologiaLabel" aria-hidden="true">
+                  <div class="modal-dialog">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title" id="modalTeologiaLabel">Licenciatura en Teología Pastoral</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                      </div>
+                      <div class="modal-body">
+                        <p>Formación integral in teología y pastoral, orientada al servicio comunitario, religioso y educativo, con énfasis en valores y liderazgo espiritual.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Licenciatura en Idiomas -->
+                <div class="modal fade" id="modalIdiomas" tabindex="-1" aria-labelledby="modalIdiomasLabel" aria-hidden="true">
+                  <div class="modal-dialog">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title" id="modalIdiomasLabel">Licenciatura en Idiomas</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                      </div>
+                      <div class="modal-body">
+                        <p>Especialidad en la adquisición de lenguas extranjeras y turismo, con enfoque global, profesional y oportunidades en el sector educativo y empresarial.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Técnico en Ingeniería Mecánica -->
+                <div class="modal fade" id="modalTecMecanica" tabindex="-1" aria-labelledby="modalTecMecanicaLabel" aria-hidden="true">
+                  <div class="modal-dialog">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title" id="modalTecMecanicaLabel">Técnico en Ingeniería Mecánica</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                      </div>
+                      <div class="modal-body">
+                        <p>Soporte técnico en mantenimiento y operación de sistemas mecánicos, con formación práctica y rápida inserción laboral en la industria.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Técnico en Multimedia -->
+                <div class="modal fade" id="modalMultimedia" tabindex="-1" aria-labelledby="modalMultimediaLabel" aria-hidden="true">
+                  <div class="modal-dialog">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title" id="modalMultimediaLabel">Técnico en Multimedia</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                      </div>
+                      <div class="modal-body">
+                        <p>Desarrollo de contenidos digitales, animación, diseño interactivo y multimedia para empresas creativas y tecnológicas.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Profesorado en Teología Pastoral -->
+                <div class="modal fade" id="modalProfTeologia" tabindex="-1" aria-labelledby="modalProfTeologiaLabel" aria-hidden="true">
+                  <div class="modal-dialog">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title" id="modalProfTeologiaLabel">Profesorado en Teología Pastoral</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                      </div>
+                      <div class="modal-body">
+                        <p>Preparación docente para el acompañamiento espiritual y educativo, con enfoque en valores y liderazgo comunitario.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+            </main>
+
+        </div>
+        <!-- Eliminado contenido de campus y espacio exclusivo -->
+    </div>
+
+   <footer>
+        <section id ="fter" class ="container-fluid p-2">
+            <section class ="container-xl">
+              <section class ="row row-cols-1 row-cols-md-3 g-5 text-justify
+                d-flex justify-content-center align-items-center">
+                    <div class ="col">
+                        <article>
+                            <img src ="../img/logoGray.png" class ="img-fluid w-100">
+                            <p>Somos una institución de Educación Superior con carisma salesiano dedicada a la formación integral de la persona humana, por medio de la investigación, la ciencia, la cultura, la tecnología, la innovación y el compromiso con la comunidad para la construcción de una sociedad libre, justa y solidaria</p>
+                            <div class ="d-flex gap-4">
+                                <i class="fs-1 fa-brands fa-facebook-f"></i> 
+                                <i class="fs-1 fa-brands fa-square-x-twitter"></i><i class="fs-1 fa-brands fa-instagram"></i>
+                              <i class="fs-1 fa-brands fa-linkedin"></i>
+                            </div>
+                        </article>
+                    </div>
+                     <div class ="col">
+                        <article>
+                                <h5 class ="text-center">Enlace de interes</h5>
+                                <div class="list-group">
+                                    <a href="#" class="list-group-item list-group-item-action list-group-item-primary">Boletin salesiano</a>
+                                    <a href="#" class="list-group-item list-group-item-action list-group-item-primary">Innovagro</a>
+                                    <a href="#" class="list-group-item list-group-item-action list-group-item-primary">Universia</a>
+                                     <a href="#" class="list-group-item list-group-item-action list-group-item-primary">Eramus mundus</a>
+                                      <a href="#" class="list-group-item list-group-item-action list-group-item-primary">Acreditaciones</a>
+                                       <a href="#" class="list-group-item list-group-item-action list-group-item-primary">Internacionalización y cooperacion para el Desarrollo</a>
+                                </div>
+                         </article>
+                    </div>
+                    <div class ="col">
+                        <article class ="border-start border-4 p-2 m-2" style="border-color: black !important ;">
+                            <h5>
+                                Campus Soyapango
+                            </h5>
+                            <p style ="margin:0">Calle a Plan del Pino Km 1 1/2. Ciudadela Don Bosco, Soyapango, El Salvador, CA. Código Postal 1874.</p>
+                            <a href ="#" style ="color: black;"><small>Ver contactos</small></a>
+                        </article>
+                        <article class ="border-start border-4 p-2 m-2" style="border-color: black !important ;">
+                            <h5>
+                                Campus Soyapango
+                            </h5>
+                            <p style ="margin:0">Calle a Plan del Pino Km 1 1/2. Ciudadela Don Bosco, Soyapango, El Salvador, CA. Código Postal 1874.</p>
+                            <a href ="#" style ="color: black;"><small>Ver contactos</small></a>
+                        </article>
+                          <article class ="border-start border-4 p-2 m-2" style="border-color: black !important ;">
+                            <h5>
+                                Campus Soyapango
+                            </h5>
+                            <p style ="margin:0">Calle a Plan del Pino Km 1 1/2. Ciudadela Don Bosco, Soyapango, El Salvador, CA. Código Postal 1874.</p>
+                            <a href ="#" style ="color: black;"><small>Ver contactos</small></a>
+                        </article>
+                    </div>
+                </section>
+            </section>
+            <section class ="row text-center">
+                <div class ="col-12">
+                    <small><b>Universidad Don Bosco © Derechos Reservados, 2025</b></small>
+                </div>
+            </section>
+        </section>
+    </footer>
+
+    <!--Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!--Script para darle funcionalidad a los botones-->
+    <script src ="../js/carreras.js"></script>
+  </body>
+</html>

@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crea tu Noticia</title>
+     <!--Icon de la página-->
+    <link rel="icon" href="img/icon.png" type="image/png" />
+    <!--Importando Bootstrap-->
+    <link rel="stylesheet" href="../bootstrap-5.3.7-dist/bootstrap-5.3.7-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="../bootstrap-5.3.7-dist/bootstrap-5.3.7-dist/js/bootstrap.bundle.min.js"></script>
+    <!--Para ocupar iconos de Font Awesome-->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+     <!--Cabezera-->
+    <header class="border-bottom border-4 border-dark">
+        <!--Nav con clase de bootstrap collapsable  para responsive-->
+        <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
+            <div class="container-fluid">
+           
+                <a href="../index.html" class="navbar-brand d-flex align-items-center">
+                    <img src="../img/Noticias/logo_udb.png" style="width: 50px; height: auto; margin-right: 10px;">
+                    <h1 class="fs-6">UNIVERSIDAD DON BOSCO</h1>
+                </a>
+
+            
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContenido" >
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+            
+                <div class="collapse navbar-collapse justify-content-end" id="navbarContenido">
+                    <ul class="navbar-nav mb-2 mb-lg-0">
+                    <li class="nav-item px-2">
+                        <a class="nav-link" href="carreras.html">
+                        <b>CARRERAS Y PROGRAMAS</b> <i class="fa-solid fa-arrow-down"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item px-2">
+                        <a class="nav-link" href="canva.html">
+                        <b>Agrega tu Noticia</b> <i class="fa-solid fa-arrow-down"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item px-2">
+                        <a class="nav-link" href="Contactanos.html">
+                        <b>Contáctanos</b> <i class="fa-solid fa-arrow-down"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item px-2">
+                        <a class="nav-link" href="#">
+                        <b>Lo más relevante</b> <i class="fa-solid fa-arrow-down"></i>
+                        </a>
+                    </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section id ="contenido" class ="container-fluid">
+            <section class =" row row-cols-1 text-center p-2">
+                <div class ="col">
+                    <h2>Agrega tu noticia </h2>
+                    <hr id ="barra">
+                </div>
+            </section>
+            <section class ="row">
+                <div class ="col-12  col-xl-3">
+                    <!--Acordeon de opciones para objetos-->
+                    <div class="accordion accordion-flush" id ="acordeon">
+                        <div class="accordion-item">
+                            <h5 class="accordion-header" id="Cabecera1">
+                                  <!--Con data-bs-toggle activo el collpase de este acordeon y con target a que elemento,
+                                  por medio del id del componente (item1) [JS interno de Bootstrap]-->
+                                <button
+                                    class="accordion-button collapsed"
+                                    type="button"
+                                    data-bs-toggle="collapse"
+                                    data-bs-target="#item1"
+                                >
+                                    <i class="fa-solid fa-diamond"></i> Figuras
+                                </button>
+                            </h5>
+                            <div
+                                id="item1"
+                                class="accordion-collapse collapse"
+                            >
+                                <div class="accordion-body rectangulo">
+                                   <p>Contenedor</p>
+                                </div>
+                                <div class="accordion-body cabezera">
+                                   <p>Cabezera</p>
+                                </div>
+                                <div class="accordion-body leyenda">
+                                   <p>Leyenda</p>
+                                </div>
+                                  <div class="accordion-body contenido">
+                                   <p>Contenido</p>
+                                </div>
+                            </div>
+                            
+                        </div>
+                          <div class="accordion-item">
+                            <h5 class="accordion-header" id="Cabecera2">
+                                <button
+                                    class="accordion-button collapsed"
+                                    type="button"
+                                    data-bs-toggle="collapse"
+                                    data-bs-target="#item2"
+                                >
+                                    <i class="fa-solid fa-palette"></i> Paleta de colores
+                                </button>
+                            </h5>
+                            <div
+                                id="item2"
+                                class="accordion-collapse collapse"
+                                aria-labelledby="flush-headingOne"
+                            >
+                                <div class="accordion-body clasico">
+                                    Clasico
+                                </div>
+                            </div>
+                            
+                        </div> 
+                    </div> 
+                </div>
+                <div class ="col-12 col-xl-7" >
+                    <h5>Cara de la Noticia</h5>
+                    <canvas id ="lienzo" width="800" height="600">
+                        
+                    </canvas>
+                    
+                </div>
+                <div class ="col-12 col-xl-2">
+                    <h5>Configuraciones</h5>
+                    <div class ="row mt-2">
+                        <div class ="col">
+                            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@fat">Agregar texto</button>
+                            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h1 class="modal-title fs-5" id="exampleModalLabel">Digite el contenido a mostrar en la Noticia</h1>
+                                        <button  type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <form>
+                                        <div class="mb-3">
+                                            <label for="recipient-name" class="col-form-label">Cabezera:</label>
+                                            <input id="txtCabeza" type="text" class="form-control" id="txtCabezera">
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="message-text" class="col-form-label">Contenido:</label>
+                                            <textarea id="txtContenido"class="form-control" id="txtContenido"></textarea>
+                                        </div>
+                                        </form>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button1" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                                        <button id = "guardarTexto"type="button2" class="btn btn-primary">Enviar</button>
+                                    </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class ="row ">
+                        <h5>Tamaño de componentes (Ancho)</h5>
+                        <div class ="col-12">
+                            <label class="form-label">Rectangulo</label>
+                            <input type="range" class="form-range" min="-8" max="8" id="rectAncho" value = "0">
+                        </div>
+                         <div class ="col-12">
+                            <label  class="form-label">Cabezera</label>
+                            <input type="range" class="form-range" min="-6" max="6" id="cabeAncho" value = "0">
+                        </div>
+                         <div class ="col-12">
+                            <label  class="form-label">Leyenda</label>
+                            <input type="range" class="form-range" min="-5" max="5" id="leyeAncho"  value = "0">
+                        </div>
+                        <div class ="col-12">
+                            <label  class="form-label">Contenido</label>
+                            <input type="range" class="form-range" min="-7" max="7" id="conteAncho"  value = "0">
+                        </div>
+                    </div>
+                      <div class ="row ">
+                        <h5>Tamaño de componentes (Altura)</h5>
+                        <div class ="col-12">
+                            <label  class="form-label">Rectangulo</label>
+                            <input type="range" class="form-range" min="-8" max="8" id="rectAltura"  value = "0">
+                        </div>
+                         <div class ="col-12">
+                            <label  class="form-label">Cabezera</label>
+                            <input type="range" class="form-range" min="-6" max="6" id="cabeAltura"  value = "0">
+                        </div>
+                         <div class ="col-12">
+                            <label class="form-label">Leyenda</label>
+                            <input type="range" class="form-range" min="-5" max="5" id="leyeAltura"  value = "0">
+                        </div>
+                           <div class ="col-12">
+                            <label  class="form-label">Contenido</label>
+                            <input type="range" class="form-range" min="-7" max="7" id="conteAltura"  value = "0">
+                        </div>
+                    </div>
+                    <div class ="row mt-2">
+                        <button id ="subir" class="btn btn-primary">
+                            Guardar
+                        </button>
+                    </div>
+                </div>
+            </section>
+        </section>
+    </main>
+    <footer>
+        <section id ="fter" class ="container-fluid p-2">
+            <section class ="container-xl">
+              <section class ="row row-cols-1 row-cols-md-3 g-5 text-justify
+                d-flex justify-content-center align-items-center">
+                    <div class ="col">
+                        <article>
+                            <img src ="../img/logoGray.png" class ="img-fluid w-100">
+                            <p>Somos una institución de Educación Superior con carisma salesiano dedicada a la formación integral de la persona humana, por medio de la investigación, la ciencia, la cultura, la tecnología, la innovación y el compromiso con la comunidad para la construcción de una sociedad libre, justa y solidaria</p>
+                            <div class ="d-flex gap-4">
+                                <i class="fs-1 fa-brands fa-facebook-f"></i> 
+                                <i class="fs-1 fa-brands fa-square-x-twitter"></i><i class="fs-1 fa-brands fa-instagram"></i>
+                              <i class="fs-1 fa-brands fa-linkedin"></i>
+                            </div>
+                        </article>
+                    </div>
+                     <div class ="col">
+                        <article>
+                                <h5 class ="text-center">Enlace de interes</h5>
+                                <div class="list-group">
+                                    <a href="#" class="list-group-item list-group-item-action list-group-item-primary">Boletin salesiano</a>
+                                    <a href="#" class="list-group-item list-group-item-action list-group-item-primary">Innovagro</a>
+                                    <a href="#" class="list-group-item list-group-item-action list-group-item-primary">Universia</a>
+                                     <a href="#" class="list-group-item list-group-item-action list-group-item-primary">Eramus mundus</a>
+                                      <a href="#" class="list-group-item list-group-item-action list-group-item-primary">Acreditaciones</a>
+                                       <a href="#" class="list-group-item list-group-item-action list-group-item-primary">Internacionalización y cooperacion para el Desarrollo</a>
+                                </div>
+                         </article>
+                    </div>
+                    <div class ="col">
+                        <article class ="border-start border-4 p-2 m-2" style="border-color: black !important ;">
+                            <h5>
+                                Campus Soyapango
+                            </h5>
+                            <p style ="margin:0">Calle a Plan del Pino Km 1 1/2. Ciudadela Don Bosco, Soyapango, El Salvador, CA. Código Postal 1874.</p>
+                            <a href ="#" style ="color: black;"><small>Ver contactos</small></a>
+                        </article>
+                        <article class ="border-start border-4 p-2 m-2" style="border-color: black !important ;">
+                            <h5>
+                                Campus Soyapango
+                            </h5>
+                            <p style ="margin:0">Calle a Plan del Pino Km 1 1/2. Ciudadela Don Bosco, Soyapango, El Salvador, CA. Código Postal 1874.</p>
+                            <a href ="#" style ="color: black;"><small>Ver contactos</small></a>
+                        </article>
+                          <article class ="border-start border-4 p-2 m-2" style="border-color: black !important ;">
+                            <h5>
+                                Campus Soyapango
+                            </h5>
+                            <p style ="margin:0">Calle a Plan del Pino Km 1 1/2. Ciudadela Don Bosco, Soyapango, El Salvador, CA. Código Postal 1874.</p>
+                            <a href ="#" style ="color: black;"><small>Ver contactos</small></a>
+                        </article>
+                    </div>
+                </section>
+            </section>
+            <!--Ajustes con style para que no haya overflow en x, no sé por que xd-->
+            <section class ="row text-center" style="width: 100% !important;">
+                <div class ="col" style  ="padding: 0 !important;">
+                    <small><b>Universidad Don Bosco © Derechos Reservados, 2025</b></small>
+                </div>
+            </section>
+        </section>
+    </footer>
+    <!--De último el script de canva por que prioriza que todo el DOM se haya renderizado primero-->
+    <script src ="../js/canvaJs.js"></script>
+</body>
+</html>

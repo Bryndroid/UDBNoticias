@@ -1,0 +1,157 @@
+body{
+    background-color: #EBEFF9;
+}
+#fter{
+    background-color: #D8D8D8;
+}
+.navbar,
+.navbar .dropdown-menu {
+      background-color: #18398b !important;
+    color: white;
+    font-weight: 500;
+    border: none;
+}
+
+.navbar-nav .nav-link {
+    color: white !important;
+    margin-right: 18px;
+    font-size: 1.05rem;
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+    color: #ffe600 !important;
+}
+.footer-udb-copy {
+    font-size: 0.95rem;
+    color: #555;
+}
+/* Redes sociales UDB */
+.redes-sociales-udb .icono-social   {
+    display: flex;
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 2rem;
+    height: 48px;
+
+    width: 48px;
+    border-radius: 50%;
+    transition: background 0.2s;
+    margin-bottom: 0 !important;
+    overflow: hidden;
+    text-decoration: none !important;
+}
+.redes-sociales-udb .icono-social i {
+    line-height: 1;
+    font-size: 2rem;
+    width: 100%;
+    text-align: center;
+
+    vertical-align: middle;
+
+
+    display: inline-block;
+}
+.icono-social[aria-label="Facebook"] i {
+    color: #1877f3;
+}
+.icono-social[aria-label="Instagram"] i {
+    color: #e4405f;
+}
+.icono-social[aria-label="X"] i {
+    color: #000000;
+}
+.icono-social[aria-label="WhatsApp"] i {
+    color: #25d366;
+}
+.icono-social[aria-label="LinkedIn"] i {
+    color: #0a66c2;
+}
+/* Íconos de redes sociales */
+.redes-sociales-udb .icono-social {
+    font-size: 2.7rem;
+    color: #156ff7;
+    transition: color 0.2s, transform 0.2s;
+    margin: 0 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.redes-sociales-udb .icono-social:hover {
+    color: #0a3e91;
+    transform: scale(1.15);
+    text-decoration: none;
+}
+/*Encabezado principal igual a los accordions*/
+.encabezado-contacto {
+    background: #156ff7 !important;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    top: 0;
+    left: 0;
+
+    right: 0; 
+
+
+    min-height: 128px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo-contacto {
+    height: 110px;
+    width: auto;
+    object-fit: contain;
+    margin-left: 1rem;
+    margin-right: 1.5rem;
+}
+
+.titulo-contacto {
+    color: #fff;
+    font-weight: bold;
+    margin: 0;
+    padding: 1.5rem 0;
+    font-size: 3rem;
+    letter-spacing: 4px;
+    flex-grow: 1;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Encabezado principal igual a los accordions */
+.encabezado-contacto {
+    background: #122aa1e3 !important;
+}
+/* Estilos personalizados para Contactanos.html */
+
+.accordion-button {
+    font-size: 1.5rem;
+    color: #0e14cb;
+    background: #fff;
+    border:   none;
+   } 
+.accordion-item   {
+    border: none;
+    margin-bottom: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(21, 111, 247, 0.08);
+}
+
+.accordion-button:not(.collapsed)     {
+    color: #0f0cdf;
+    background-color: #f0f4fb;
+    box-shadow: none;
+}
+
+.accordion-body {
+    background: #f8faff;
+    color: #222;
+}
+
+
