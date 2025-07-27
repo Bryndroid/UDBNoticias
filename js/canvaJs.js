@@ -8,9 +8,9 @@ var textoArray = [];
  textoArray.push({
         x:0,
         y:0,
-        fuente: "20px Arial",
+        fuente: "40px Arial",
         color: "red",
-        texto: "Nada",
+        texto: "Texto...",
         tipo:"cabezera"
     });
     textoArray.push({
@@ -18,7 +18,7 @@ var textoArray = [];
         y:0,
         fuente: "20px Arial",
         color: "black",
-        texto: "Nada",
+        texto: "Texto...",
         tipo:"contenido"
     });
 let figuraIndice =  null;
@@ -34,6 +34,8 @@ var ind = 0;
  let divLeyenda= document.querySelector(".leyenda");
  let divClasico =  document.querySelector(".clasico");
  let divContenido =  document.querySelector(".contenido");
+ let divVintage =  document.querySelector(".vintage");
+ let divBorrar =  document.querySelector("#borrar");
 //Valores de radiobox
 let rectAltura = document.querySelector("#rectAltura");
 let rectAncho = document.querySelector("#rectAncho");
@@ -67,14 +69,15 @@ boton.addEventListener("click", ()=>{
                 i.width = cabeAncho.value*40 + 375;
                 i.height = cabeAltura.value*38+ 100;
         }else if (i.tipo == "leyenda"){
-                i.width = leyeAncho.value*40 + 100;
-                i.height =leyeAltura.value*38+ 40;
+                i.width = leyeAncho.value*40+ 375;
+                i.height =leyeAltura.value*10+ 100;
         }else{
-             i.width = conteAncho.value*40 + 325;
-                i.height =conteAltura.value*38+ 425;
+             i.width = conteAncho.value*10 + 325;
+                i.height =conteAltura.value*6+ 425;
         }
     }
     dibujar();
+    ImprimirTexto();
 });
  divClasico.addEventListener("click", ()=>{
     if(figuras !== null){
@@ -90,8 +93,49 @@ boton.addEventListener("click", ()=>{
             }
         }
     }
+    for(let i of textoArray){
+        if(i.tipo =="cabezera"){
+            i.color = "aliceblue";
+        }else{
+            i.color = "aliceblue";
+        }
+    }
     dibujar();
+    ImprimirTexto();
  });
+ divVintage.addEventListener("click", ()=>{
+    if(figuras !== null){
+        for(let i of figuras){
+            if(i.tipo =="contenedor"){
+                i.color = "#D4A373";
+            }else if (i.tipo =="cabezera"){
+                i.color ="#E2725B";
+            }else if (i.tipo =="leyenda"){
+                i.color = "#A3B18A";
+            }else{
+                i.color = "#6C757D";
+            }
+        }
+    }
+    for(let i of textoArray){
+        if(i.tipo =="cabezera"){
+            i.color = "#FAF3E0";
+        }else{
+            i.color = "#4E342E";
+        }
+    }
+    dibujar();
+    ImprimirTexto();
+ });
+ divBorrar.addEventListener("click", ()=>{
+    contexto.clearRect(0,0,canvaDOM.width,canvaDOM.height);
+    figuras = [];
+    //No supe como resetear el texto jaja, ya que yo quiero que siga saliendo "texto..."
+    textoArray.forEach(obj =>{
+        obj.x = -12;
+        obj.y = -12;
+    })
+ })
 
  divRect.addEventListener("click", ()=>{
     ind++;
@@ -173,10 +217,9 @@ function coordenadasPadre(texto){
     let texto2 =  texto;
     let indice = 0;
     for(let i of figuras){
-        console.log(indice);
         if(i.tipo == texto2[indice].tipo){
             texto2[indice].x = i.x+15;
-            texto2[indice].y = i.y +20;
+            texto2[indice].y = i.y +40;
             indice = 0;
         }else{
             indice++;

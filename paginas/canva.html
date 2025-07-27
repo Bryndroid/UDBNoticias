@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Crea tu Noticia</title>
      <!--Icon de la página-->
-    <link rel="icon" href="img/icon.png" type="image/png" />
+    <link rel="icon" href="../img/Noticias/logo_udb.png" type="image/png" />
     <!--Importando Bootstrap-->
     <link rel="stylesheet" href="../bootstrap-5.3.7-dist/bootstrap-5.3.7-dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="../css/style.css">
@@ -62,10 +62,11 @@
         <section id ="contenido" class ="container-fluid">
             <section class =" row row-cols-1 text-center p-2">
                 <div class ="col">
-                    <h2>Agrega tu noticia </h2>
+                    <h2>Agrega tu noticia</h2> <small>(En constante mejora ;) )</small>
                     <hr id ="barra">
                 </div>
             </section>
+            <!--Lateral izquierdo-->
             <section class ="row">
                 <div class ="col-12  col-xl-3">
                     <!--Acordeon de opciones para objetos-->
@@ -102,7 +103,7 @@
                             </div>
                             
                         </div>
-                          <div class="accordion-item">
+                        <div class="accordion-item">
                             <h5 class="accordion-header" id="Cabecera2">
                                 <button
                                     class="accordion-button collapsed"
@@ -121,11 +122,18 @@
                                 <div class="accordion-body clasico">
                                     Clasico
                                 </div>
+                                 <div class="accordion-body vintage">
+                                    Vintage
+                                </div>
                             </div>
                             
                         </div> 
-                    </div> 
+                    </div>
+                     <button id ="borrar" class="btn btn-dark m-4 w-50">
+                            Borrar
+                        </button> 
                 </div>
+                <!--Canva-->
                 <div class ="col-12 col-xl-7" >
                     <h5>Cara de la Noticia</h5>
                     <canvas id ="lienzo" width="800" height="600">
@@ -133,6 +141,7 @@
                     </canvas>
                     
                 </div>
+                <!--Lateral derecho-->
                 <div class ="col-12 col-xl-2">
                     <h5>Configuraciones</h5>
                     <div class ="row mt-2">
